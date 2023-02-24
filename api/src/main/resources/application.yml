@@ -6,4 +6,4 @@ spring:
     driver-class-name: com.mysql.jdbc.Driver
 server:
   servlet:
-    context-path: /admin
+    context-path: /api
