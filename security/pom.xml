@@ -12,6 +12,7 @@
     <version>0.0.1-SNAPSHOT</version>
     <name>security</name>
     <description>security module</description>
+    <packaging>pom</packaging>
 
     <modules>
         <module>security-common</module>
