@@ -7,6 +7,8 @@
         <module>common</module>
         <module>service</module>
         <module>security</module>
+        <module>admin</module>
+        <module>api</module>
     </modules>
     <groupId>com.mombol</groupId>
     <artifactId>skeleton</artifactId>
