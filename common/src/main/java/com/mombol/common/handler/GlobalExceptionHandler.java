@@ -18,7 +18,10 @@ public class GlobalExceptionHandler {
 
     @ExceptionHandler(value = MethodArgumentNotValidException.class)
     public ResponseBodyEntity<Object> exceptionHandler(MethodArgumentNotValidException e) {
-        return ResponseBodyEntity.fail(ResponseCode.BAD_REQUEST);
+        return ResponseBodyEntity.fail(
+                ResponseCode.BAD_REQUEST.getCode(),
+                e.getBindingResult().getFieldErrors().get(0).getDefaultMessage()
+        );
     }
 
     @ExceptionHandler(value = Exception.class)
