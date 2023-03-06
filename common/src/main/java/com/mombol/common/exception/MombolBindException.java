@@ -1,6 +1,6 @@
 package com.mombol.common.exception;
 
-public class MombolBindException extends Exception {
+public class MombolBindException extends RuntimeException {
 
     public MombolBindException() {
         super();

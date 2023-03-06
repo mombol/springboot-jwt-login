@@ -13,7 +13,7 @@ public class HelloController {
     }
 
     @GetMapping("/custom-exception")
-    public void customException() throws MombolBindException {
+    public void customException() {
         throw new MombolBindException("抛出自定义异常信息");
     }
 
