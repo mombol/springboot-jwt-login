@@ -1,5 +1,6 @@
 package com.mombol.common.handler;
 
+import com.mombol.common.exception.MombolBindException;
 import com.mombol.common.response.ResponseBodyEntity;
 import com.mombol.common.response.ResponseCode;
 import org.springframework.validation.BindException;
@@ -21,6 +22,14 @@ public class GlobalExceptionHandler {
         return ResponseBodyEntity.fail(
                 ResponseCode.BAD_REQUEST.getCode(),
                 e.getBindingResult().getFieldErrors().get(0).getDefaultMessage()
+        );
+    }
+
+    @ExceptionHandler(value = MombolBindException.class)
+    public ResponseBodyEntity<Object> exceptionHandler(MombolBindException e) {
+        return ResponseBodyEntity.fail(
+                ResponseCode.BAD_REQUEST.getCode(),
+                e.getMessage()
         );
     }
 
