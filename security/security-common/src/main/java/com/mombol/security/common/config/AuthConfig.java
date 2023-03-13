@@ -13,8 +13,8 @@ import org.springframework.security.config.annotation.method.configuration.Enabl
 
 import javax.servlet.DispatcherType;
 
-@Configuration
-@EnableMethodSecurity(prePostEnabled = true)
+//@Configuration
+//@EnableMethodSecurity(prePostEnabled = true)
 public class AuthConfig {
 
     @Autowired
