@@ -4,6 +4,10 @@ spring:
     username: root
     password: 123456
     driver-class-name: com.mysql.jdbc.Driver
+#  security:
+#    user:
+#      name: admin
+#      password: 123123
 server:
   servlet:
     context-path: /admin
