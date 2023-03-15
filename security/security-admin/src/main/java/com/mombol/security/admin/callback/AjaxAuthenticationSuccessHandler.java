@@ -23,6 +23,9 @@ public class AjaxAuthenticationSuccessHandler implements AuthenticationSuccessHa
         responseBodyEntity.setCode("001");
         responseBodyEntity.setMessage("Login Success!");
 
+        response.setCharacterEncoding("utf-8");
+        response.setContentType("application/json");
+
         Map<String, Object> resultData = new HashMap<>();
         Map<String, Object> tokenData = new HashMap<>();
 

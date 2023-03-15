@@ -19,6 +19,9 @@ public class AjaxAuthenticationEntryPoint implements AuthenticationEntryPoint {
         responseBodyEntity.setCode("000");
         responseBodyEntity.setMessage("No Authenticated!");
 
+        response.setCharacterEncoding("utf-8");
+        response.setContentType("application/json");
+
         response.getWriter().write(JSON.toJSONString(responseBodyEntity));
     }
 }

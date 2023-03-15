@@ -18,7 +18,10 @@ public class AjaxAuthenticationFailureHandler implements AuthenticationFailureHa
     public void onAuthenticationFailure(HttpServletRequest request, HttpServletResponse response, AuthenticationException exception) throws IOException, ServletException {
         ResponseBodyEntity responseBodyEntity = new ResponseBodyEntity();
         responseBodyEntity.setCode("002");
-        responseBodyEntity.setMessage("Login failed!");
+        responseBodyEntity.setMessage("Login failed: " + exception.getMessage() + "!");
+
+        response.setCharacterEncoding("utf-8");
+        response.setContentType("application/json");
 
         response.getWriter().write(JSON.toJSONString(responseBodyEntity));
     }
